@@ -1,0 +1,27 @@
+{
+	"home": "Strona główna",
+	"company": "Firma",
+	"aerospaceTitle": "Rozwiązania lotnicze",
+	"eqm": "EQM",
+	"newsroom": "Newsroom",
+	"downloads": "Pobierz",
+	"contact": "Kontakt",
+	"products": {
+		"structuralComponents": {
+			"title": "Komponenty strukturalne",
+			"description": "Zaawansowane rozwiązania lotnicze"
+		},
+		"mechanicalSolutions": {
+			"title": "Rozwiązania mechaniczne",
+			"description": "Precyzyjna produkcja"
+		},
+		"standardHardware": {
+			"title": "Standardowy sprzęt",
+			"description": "Rozwiązania sprzętowe wysokiej jakości"
+		},
+		"fastenerTechnologies": {
+			"title": "Technologie łączników",
+			"description": "Zaawansowane rozwiązania mocujące"
+		}
+	}
+}

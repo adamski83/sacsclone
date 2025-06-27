@@ -1,0 +1,21 @@
+{
+	"title": "COMPANY",
+	"weAre": "WE ARE SACS AEROSPACE",
+	"description": "We develop new perspectives. Every second, an aircraft takes off worldwide. Renowned aircraft manufacturers such as AIRBUS, BOEING and BOMBARDIER take off daily with our technologies.",
+	"innovation": "Innovation and precision are our fuel. Creativity and passion our drive.",
+	"tagline": "We are SACS – The art of aerospace",
+	"competencies": {
+		"title": "Competencies:",
+		"design": "Design and Development",
+		"production": "Production and Assembly",
+		"supply": "Supply Chain Management",
+		"tooling": "Tool Development and Production",
+		"logistics": "Storage and Logistics",
+		"assembly": "Assembly of Assemblies"
+	},
+	"certifications": {
+		"en9100": "EN 9100",
+		"easa21": "EASA PART 21 SUBPART G",
+		"easa145": "EASA PART 145"
+	}
+}

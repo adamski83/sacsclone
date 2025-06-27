@@ -1,0 +1,27 @@
+{
+	"home": "Startseite",
+	"company": "Unternehmen",
+	"aerospaceTitle": "Aerospace Solutions",
+	"eqm": "EQM",
+	"newsroom": "Newsroom",
+	"downloads": "Downloads",
+	"contact": "Kontakt",
+	"products": {
+		"structuralComponents": {
+			"title": "Strukturelle Komponenten",
+			"description": "Fortschrittliche Luftfahrtlösungen"
+		},
+		"mechanicalSolutions": {
+			"title": "Mechanische Lösungen",
+			"description": "Präzisionsfertigung"
+		},
+		"standardHardware": {
+			"title": "Standard Hardware",
+			"description": "Qualitäts-Hardware-Lösungen"
+		},
+		"fastenerTechnologies": {
+			"title": "Befestigungstechnologien",
+			"description": "Fortschrittliche Befestigungslösungen"
+		}
+	}
+}

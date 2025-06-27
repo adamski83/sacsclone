@@ -1,0 +1,27 @@
+{
+	"home": "Home",
+	"company": "Company",
+	"aerospaceTitle": "Aerospace Solutions",
+	"eqm": "EQM",
+	"newsroom": "Newsroom",
+	"downloads": "Downloads",
+	"contact": "Contact",
+	"products": {
+		"structuralComponents": {
+			"title": "Structural Components",
+			"description": "Advanced aerospace solutions"
+		},
+		"mechanicalSolutions": {
+			"title": "Mechanical Solutions",
+			"description": "Precision manufacturing"
+		},
+		"standardHardware": {
+			"title": "Standard Hardware",
+			"description": "Quality hardware solutions"
+		},
+		"fastenerTechnologies": {
+			"title": "Fastener Technologies",
+			"description": "Advanced fastening solutions"
+		}
+	}
+}
