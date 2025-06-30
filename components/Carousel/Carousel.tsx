@@ -1,9 +1,10 @@
 "use client";
 
+import "./carousel.css";
 import Link from "next/link";
 import { useRef } from "react";
 import Slider from "react-slick";
-import { generateSlug, portfolioItems } from "../data/portfolio-items";
+import { generateSlug, portfolioItems } from "../../data/portfolio-items";
 
 type SlideItem = {
 	id: string;
@@ -12,7 +13,6 @@ type SlideItem = {
 	slug?: string;
 };
 
-// Konwertujemy dane z portfolio-items do formatu carousel
 const slideItems: SlideItem[] = portfolioItems.map((item, index) => ({
 	id: (index + 1).toString(),
 	title: item.title,
@@ -50,27 +50,27 @@ function AutoPlayMethods() {
 	};
 
 	return (
-		<div className='py-16 px-4 bg-inherit w-full'>
-			<div className='max-w-4xl mx-auto'>
-				<h2 className='text-2xl md:text-4xl font-bold text-center mb-12 text-white'>
-					AKTUELLE STELLENANGEBOTE
+		<section className="py-16 px-4 bg-inherit w-full">
+			<div className="max-w-4xl mx-auto">
+				<h2 className="text-2xl md:text-4xl font-bold text-center mb-12 text-white uppercase">
+					Aktuele Stellangebotte
 				</h2>
-				<div className='relative mb-8'>
-					{" "}
+				<article className="relative mb-8">
 					<Slider ref={sliderRef} {...settings}>
 						{slideItems.map((item) => {
 							const href = `/portfolio-items/${
 								item.slug || generateSlug(item.title)
 							}`;
 							return (
-								<div key={item.id} className='px-2'>
+								<div key={item.id} className="px-2">
 									<Link
 										href={href}
-										className='shadow-2xl flex flex-col justify-center h-[300px] sm:h-[350px] lg:h-[300px] transition-transform duration-300 hover:scale-105 cursor-pointer bg-inherit rounded-lg overflow-hidden mx-2'>
-										<h3 className='text-lg sm:text-xl md:text-2xl font-bold text-center mb-2'>
+										className="shadow-2xl flex flex-col justify-center h-[300px] sm:h-[350px] lg:h-[300px] transition-transform duration-300 hover:scale-105 cursor-pointer bg-inherit rounded-lg overflow-hidden mx-2"
+									>
+										<h3 className="text-lg sm:text-xl md:text-2xl font-bold text-center mb-2">
 											{item.title}
 										</h3>
-										<p className='text-sm sm:text-base md:text-lg text-center'>
+										<p className="text-sm sm:text-base md:text-lg text-center">
 											{item.description}
 										</p>
 									</Link>
@@ -78,33 +78,18 @@ function AutoPlayMethods() {
 							);
 						})}
 					</Slider>
-					<div className='flex justify-center mt-8 space-x-2'>
+					<article className="flex justify-center mt-8 space-x-2">
 						{slideItems.map((_, index) => (
 							<button
 								key={index}
-								className='w-3 h-3 bg-gray-400 rounded-full hover:bg-orange-500 transition-colors duration-300 focus:outline-none'
+								className="w-3 h-3 bg-gray-400 rounded-full hover:bg-orange-500 transition-colors duration-300 focus:outline-none"
 								onClick={() => sliderRef.current?.slickGoTo(index)}
 							/>
 						))}
-					</div>
-				</div>
+					</article>
+				</article>
 			</div>
-
-			<style jsx global>{`
-				.slick-dots {
-					display: none !important;
-				}
-				.slick-track {
-					display: flex !important;
-				}
-				.slick-slide {
-					height: inherit !important;
-				}
-				.slick-slide > div {
-					height: 100%;
-				}
-			`}</style>
-		</div>
+		</section>
 	);
 }
 

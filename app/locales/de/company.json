@@ -3,19 +3,7 @@
 	"weAre": "WE ARE SACS AEROSPACE",
 	"description": "Wir entwickeln neue Perspektiven. Weltweit startet jede Sekunde ein Flugzeug. Namhafte Flugzeughersteller wie AIRBUS, BOEING und BOMBARDIER heben täglich mit unseren Technologien ab.",
 	"innovation": "Innovation und Präzision sind unser Treibstoff. Kreativität und Leidenschaft unser Antrieb.",
-	"tagline": "We are SACS – The art of aerospace",
-	"competencies": {
-		"title": "Kompetenzen:",
-		"design": "Design und Entwicklung",
-		"production": "Produktion und Assemblierung",
-		"supply": "Supply Chain Management",
-		"tooling": "Werkzeugentwicklung und Produktion",
-		"logistics": "Lager und Logistik",
-		"assembly": "Montage von Baugruppen"
-	},
-	"certifications": {
-		"en9100": "EN 9100",
-		"easa21": "EASA PART 21 SUBPART G",
-		"easa145": "EASA PART 145"
-	}
+	"different": "Als eines der führenden Produktions- und Entwicklungsunternehmen in der Luftfahrtbranche zeichnen wir uns durch starke Kernkompetenzen – Engineering, Qualität und Fertigung (EQM) – aus und verschaffen unseren Kunden dadurch bedeutende Wettbewerbsvorteile auf dem anspruchsvollen Markt.",
+	"solutions": "Die SACS Aerospace GmbH wurde im Jahr 2002 als Produktions- und Entwicklungsunternehmen gegründet und setzt sich täglich mit innovativen Lösungen für die Luftfahrt auseinander. Zukunftsweisendes Engineering, modernste Fertigungstechnologien und effizientes Supply Chain Management ermöglichen dabei Präzision auf höchstem Niveau.",
+	"tagline": "We are SACS – The art of aerospace"
 }

@@ -5,8 +5,8 @@ type Props = {
 const Newsroom = ({ children }: Props) => {
 	return (
 		<>
-			<main className=''>
-				<div className=' mx-auto pt-6 h-full'>{children}</div>
+			<main className="">
+				<div className=" mx-auto pt-6 h-full">{children}</div>
 			</main>
 		</>
 	);

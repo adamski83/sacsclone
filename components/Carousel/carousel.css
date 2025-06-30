@@ -1,0 +1,12 @@
+.slick-dots {
+	display: none !important;
+}
+.slick-track {
+	display: flex !important;
+}
+.slick-slide {
+	height: inherit !important;
+}
+.slick-slide > div {
+	height: 100%;
+}

@@ -1,14 +1,12 @@
 @import "tailwindcss";
 
-@plugin "daisyui";
-
 :root {
 	--background: #ffffff;
 	--foreground: #484d52;
 	--root-bg: #484d52;
 }
 
-@theme inline {
+:root {
 	--color-background: var(--background);
 	--color-foreground: var(--foreground);
 	--font-sans: var(--font-geist-sans);

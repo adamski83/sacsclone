@@ -1,9 +1,16 @@
 {
 	"company": "SACS Aerospace GmbH",
 	"information": "Information",
-	"socialMedia": "Social Media",
-	"impressum": "Legal Notice",
 	"privacy": "Privacy Policy",
 	"cookies": "Cookie Policy",
-	"copyright": "© {{year}} SACS Aerospace"
+	"karier": "Career",
+	"download": "Downloads",
+	"newsroom": "Newsroom",
+	"unternehmen": "Company",
+	"contact": "Contact",
+	"structural components": "Structural Components",
+	"mechanical solutions": "Mechanical Solutions",
+	"standard hardware": "Standard Hardware",
+	"fastener technologies": "Fastener Technologies",
+	"aerospace solutions": "Aerospace Solutions"
 }

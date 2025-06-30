@@ -9,11 +9,11 @@ export const useI18n = (namespace?: string) => {
 		i18n.changeLanguage(language);
 	};
 
-	// Funkcje pomocnicze dla różnych namespace'ów
 	const tCommon = (key: string) => t(key, { ns: "common" });
 	const tNav = (key: string) => t(key, { ns: "navigation" });
 	const tCompany = (key: string) => t(key, { ns: "company" });
 	const tFooter = (key: string) => t(key, { ns: "footer" });
+	const tUnternehmen = (key: string) => t(key, { ns: "unternehmen" });
 
 	return {
 		t,
@@ -22,6 +22,7 @@ export const useI18n = (namespace?: string) => {
 		tCompany,
 		tFooter,
 		changeLanguage,
+		tUnternehmen,
 		currentLanguage: i18n.language,
 		isLoading: !i18n.isInitialized,
 	};

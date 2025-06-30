@@ -9,19 +9,19 @@
 	"products": {
 		"structuralComponents": {
 			"title": "Structural Components",
-			"description": "Advanced aerospace solutions"
+			"description": "Advanced aerospace solutions for structural applications"
 		},
 		"mechanicalSolutions": {
 			"title": "Mechanical Solutions",
-			"description": "Precision manufacturing"
+			"description": "Precision manufacturing and mechanical engineering"
 		},
 		"standardHardware": {
 			"title": "Standard Hardware",
-			"description": "Quality hardware solutions"
+			"description": "High-quality standard hardware components"
 		},
 		"fastenerTechnologies": {
 			"title": "Fastener Technologies",
-			"description": "Advanced fastening solutions"
+			"description": "Advanced fastening solutions for aerospace industry"
 		}
 	}
 }

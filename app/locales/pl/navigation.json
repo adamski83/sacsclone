@@ -9,19 +9,19 @@
 	"products": {
 		"structuralComponents": {
 			"title": "Komponenty strukturalne",
-			"description": "Zaawansowane rozwiązania lotnicze"
+			"description": "Zaawansowane rozwiązania lotnicze dla zastosowań strukturalnych"
 		},
 		"mechanicalSolutions": {
 			"title": "Rozwiązania mechaniczne",
-			"description": "Precyzyjna produkcja"
+			"description": "Precyzyjna produkcja i inżynieria mechaniczna"
 		},
 		"standardHardware": {
 			"title": "Standardowy sprzęt",
-			"description": "Rozwiązania sprzętowe wysokiej jakości"
+			"description": "Wysokiej jakości standardowe komponenty sprzętowe"
 		},
 		"fastenerTechnologies": {
 			"title": "Technologie łączników",
-			"description": "Zaawansowane rozwiązania mocujące"
+			"description": "Zaawansowane rozwiązania mocujące dla przemysłu lotniczego"
 		}
 	}
 }

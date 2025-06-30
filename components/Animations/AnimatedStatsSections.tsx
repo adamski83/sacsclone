@@ -48,7 +48,7 @@ const AnimatedCounter = ({
 				scale: 1,
 				duration: 0.6,
 				ease: "back.out(1.7)",
-			}
+			},
 		);
 
 		tl.to(
@@ -60,12 +60,12 @@ const AnimatedCounter = ({
 				onUpdate: () => {
 					if (element) {
 						element.textContent = Math.floor(
-							countAnimation.value
+							countAnimation.value,
 						).toLocaleString();
 					}
 				},
 			},
-			"-=0.3"
+			"-=0.3",
 		);
 
 		return () => {
@@ -74,14 +74,15 @@ const AnimatedCounter = ({
 	}, [endValue, duration]);
 
 	return (
-		<div ref={containerRef} className='group cursor-pointer'>
-			<div className='text-center p-6 rounded-lg  shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2  '>
+		<div ref={containerRef} className="group cursor-pointer">
+			<div className="text-center p-6 rounded-lg  shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2  ">
 				<h4
 					ref={numberRef}
-					className='text-4xl md:text-5xl font-bold text-orange-600 mb-2 font-mono'>
+					className="text-4xl md:text-5xl font-bold text-orange-600 mb-2 font-mono"
+				>
 					0
 				</h4>
-				<h5 className='text-white text-sm md:text-base font-medium leading-tight'>
+				<h5 className="text-white text-sm md:text-base font-medium leading-tight">
 					{label}
 				</h5>
 			</div>
@@ -119,7 +120,7 @@ export const AnimatedStatsSection = ({
 					end: "bottom 30%",
 					toggleActions: "play none none reverse",
 				},
-			}
+			},
 		);
 
 		return () => {
@@ -128,10 +129,10 @@ export const AnimatedStatsSection = ({
 	}, []);
 
 	return (
-		<div ref={sectionRef} className='py-16 px-4 '>
-			<div className='max-w-6xl mx-auto'>
-				<div className='text-center mb-12'></div>
-				<div className='flex flex-col md:flex-row items-center justify-center gap-8'>
+		<div ref={sectionRef} className="py-16 px-4 ">
+			<div className="max-w-6xl mx-auto">
+				<div className="text-center mb-12"></div>
+				<div className="flex flex-col md:flex-row items-center justify-center gap-8">
 					<AnimatedCounter
 						endValue={endValue}
 						duration={duration}

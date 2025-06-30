@@ -27,8 +27,8 @@ export default function I18nProvider({
 
 	if (!isI18nInitialized) {
 		return (
-			<div className='flex items-center justify-center min-h-screen bg-gray-900'>
-				<div className='animate-spin rounded-full h-32 w-32 border-b-2 border-orange-600'></div>
+			<div className="flex items-center justify-center min-h-screen bg-gray-900">
+				<div className="animate-spin rounded-full h-32 w-32 border-b-2 border-orange-600"></div>
 			</div>
 		);
 	}

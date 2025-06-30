@@ -32,7 +32,7 @@ export const Content = ({
 	const imageRef = useRef<HTMLDivElement>(null);
 	const containerRef = useRef<HTMLDivElement>(null);
 	const titleRef = useRef<HTMLHeadingElement>(null);
-	const itemsRef = useRef<HTMLDivElement[]>([]);
+	const itemsRef = useRef<HTMLElement[]>([]);
 
 	useEffect(() => {
 		const image = imageRef.current;
@@ -87,7 +87,7 @@ export const Content = ({
 				repeat: 1,
 				ease: "power2.inOut",
 			},
-			"-=0.3"
+			"-=0.3",
 		);
 
 		tl.to(
@@ -98,7 +98,7 @@ export const Content = ({
 				duration: 0.6,
 				ease: "power2.out",
 			},
-			"-=0.8"
+			"-=0.8",
 		);
 
 		tl.to(
@@ -110,7 +110,7 @@ export const Content = ({
 				stagger: 0.1,
 				ease: "power2.out",
 			},
-			"-=0.4"
+			"-=0.4",
 		);
 
 		return () => {
@@ -121,46 +121,48 @@ export const Content = ({
 	return (
 		<div
 			ref={containerRef}
-			className='flex flex-col items-center p-[20px] gap-8 relative'>
-			<div ref={imageRef} className='relative group cursor-pointer'>
+			className="flex flex-col items-center p-[20px] gap-8 relative"
+		>
+			<div ref={imageRef} className="relative group cursor-pointer">
 				<Image
 					src={imageSrc}
 					alt={imageAlt}
 					width={100}
 					height={100}
-					className='flex-shrink-0 transition-all duration-300 hover:scale-110 drop-shadow-lg'
+					className="flex-shrink-0 transition-all duration-300 hover:scale-110 drop-shadow-lg"
 				/>
-				<div className='absolute inset-0 bg-orange-400 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl -z-10 scale-150'></div>
+				<div className="absolute inset-0 bg-orange-400 rounded-full opacity-0 group-hover:opacity-20 transition-opacity duration-300 blur-xl -z-10 scale-150"></div>
 			</div>
 
-			<section className='w-full'>
-				<h3 ref={titleRef} className='text-xl font-bold mb-6 text-center'>
+			<section className="w-full">
+				<h3 ref={titleRef} className="text-xl font-bold mb-6 text-center">
 					{title}
 				</h3>
 
-				<div className='space-y-4'>
+				<ul className="space-y-4">
 					{items.map((item, index) => (
-						<div
+						<li
 							key={item.id}
 							ref={(el) => {
 								if (el) itemsRef.current[index] = el;
 							}}
-							className='flex items-start mb-4 group hover:bg-gray-50 p-2 rounded-lg transition-all duration-300'>
-							<div className='flex-shrink-0 mt-1'>
+							className="flex items-start mb-4 group hover:bg-gray-50 p-2 rounded-lg transition-all duration-300"
+						>
+							<div className="flex-shrink-0 mt-1">
 								<Image
 									src={checkIconSrc}
-									alt='Checkmark'
+									alt="Checkmark"
 									width={20}
 									height={20}
-									className='mr-4 transition-transform duration-300 group-hover:scale-110'
+									className="mr-4 transition-transform duration-300 group-hover:scale-110"
 								/>
 							</div>
-							<p className='text-sm leading-relaxed text-white group-hover:text-gray-900 transition-colors duration-300'>
+							<p className="text-sm leading-relaxed text-white group-hover:text-gray-900 transition-colors duration-300">
 								{item.text}
 							</p>
-						</div>
+						</li>
 					))}
-				</div>
+				</ul>
 			</section>
 		</div>
 	);

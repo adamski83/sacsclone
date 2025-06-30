@@ -1,36 +1,36 @@
 import Image from "next/image";
 
-import { Content } from "../components/content";
-import { AnimatedStatsSection } from "../animations/animatedStatsSections";
+import { AnimatedStatsSection } from "../../components/Animations/AnimatedStatsSections";
+import { Content } from "../../components/Content/Content";
 
 function eqmPage() {
 	return (
 		<>
-			<div className='relative'>
+			<div className="relative">
 				<Image
-					src='/eqm-hero.jpg'
-					alt='Hero Image'
+					src="/eqm-hero.jpg"
+					alt="Hero Image"
 					width={1920}
 					height={1080}
-					className='w-full h-[480px] object-cover '
+					className="w-full h-[480px] object-cover "
 				/>
-				<div className='absolute inset-y-0 left-8 flex items-center'>
+				<div className="absolute inset-y-0 left-8 flex items-center">
 					<Image
-						src='/sacs-logo.png'
-						alt='SACS Logo'
+						src="/sacs-logo.png"
+						alt="SACS Logo"
 						width={200}
 						height={80}
-						className='w-auto h-16 md:h-20 lg:h-24'
+						className="w-auto h-16 md:h-20 lg:h-24"
 					/>
 				</div>
-				<div className='absolute bottom-8 left-8'>
-					<p className='text-white text-5xl font-bold tracking-wide'>EQM</p>
+				<div className="absolute bottom-8 left-8">
+					<p className="text-white text-5xl font-bold tracking-wide">EQM</p>
 				</div>
 			</div>
-			<section className='m-8'>
+			<section className="m-8">
 				<div>
-					<h1 className='text-5xl font-bold mb-8'>WE ARE DIFFERENT</h1>
-					<h3 className='text-xl  mb-8'>
+					<h1 className="text-5xl font-bold mb-8">WE ARE DIFFERENT</h1>
+					<h3 className="text-xl  mb-8">
 						Als eines der führenden Produktions- und Entwicklungsunternehmen der
 						Luftfahrtbranche punkten wir mit starken Kernkompetenzen –
 						Engineering, Quality und Manufacturing (EQM) – und ermöglichen
@@ -38,37 +38,37 @@ function eqmPage() {
 						Markt.
 					</h3>
 				</div>
-				<div className='flex flex-col md:flex-row items-center justify-between gap-8 '>
+				<div className="flex flex-col md:flex-row items-center justify-between gap-8 ">
 					<div>
-						<h3 className='text-2xl font-bold'>Engineering</h3>
-						<p className='mb-4'>
+						<h3 className="text-2xl font-bold">Engineering</h3>
+						<p className="mb-4">
 							Wir entwickeln Ihnen einen Wettbewerbsvorteil durch innovative
 							Lösungen.
 						</p>
-						<h3 className='text-2xl font-bold'>Quality</h3>
-						<p className='mb-4 '>
+						<h3 className="text-2xl font-bold">Quality</h3>
+						<p className="mb-4 ">
 							Wir garantieren höchste Qualität durch modernste Prozesse.
 						</p>
-						<h3 className='text-2xl font-bold'>Manufacturing</h3>
-						<p className='mb-4'>
+						<h3 className="text-2xl font-bold">Manufacturing</h3>
+						<p className="mb-4">
 							Wir produzieren maximale Präzision durch neuste
 							Fertigungstechnologien.
 						</p>
 					</div>
-					<Image src='/eqm.png' alt='eqm' height={640} width={600} />
+					<Image src="/eqm.png" alt="eqm" height={640} width={600} />
 				</div>
 			</section>
 
 			<Image
-				src='/airplane-interior.jpg'
-				alt='Hero Image'
+				src="/airplane-interior.jpg"
+				alt="Hero Image"
 				width={1920}
 				height={1080}
-				className='w-full h-[300px] object-cover '
+				className="w-full h-[300px] object-cover "
 			/>
-			<section className='m-8 '>
-				<h2 className='text-4xl mb-8'>ENGINEERING</h2>
-				<h3 className=' mb-8'>
+			<section className="m-8 ">
+				<h2 className="text-4xl mb-8">ENGINEERING</h2>
+				<h3 className=" mb-8">
 					Lösungsorientiertes Arbeiten – trotz den strikten Anforderungen der
 					Luftfahrt gelingt es unserem Team, kundenorientierte Lösungswege zu
 					finden und maßgeschneidert umzusetzen. Dabei wird der Funktionalitäts-
@@ -85,27 +85,27 @@ function eqmPage() {
 					Kuka-Roboter für Endurace-Tests, Salzsprühnebelkammer und
 					Zug-Druck-Prüfmaschinen.
 				</h3>
-				<section className='mt-8 flex md:flex-row flex-col gap-8 justify-center'>
+				<section className="mt-8 flex md:flex-row flex-col gap-8 justify-center">
 					<AnimatedStatsSection
 						duration={2.5}
 						endValue={100}
-						label='Projekte erfolgreich umgesetzt'
+						label="Projekte erfolgreich umgesetzt"
 					/>
 					<AnimatedStatsSection
 						duration={2.5}
 						endValue={100}
-						label='Projekte erfolgreich umgesetzt'
+						label="Projekte erfolgreich umgesetzt"
 					/>
 					<AnimatedStatsSection
 						duration={2.5}
 						endValue={100}
-						label='Projekte erfolgreich umgesetzt'
+						label="Projekte erfolgreich umgesetzt"
 					/>
 				</section>
 			</section>
-			<section className='m-8 flex md:flex-row flex-col '>
+			<section className="m-8 flex md:flex-row flex-col ">
 				<Content
-					title='Engineering Services :'
+					title="Engineering Services :"
 					items={[
 						{
 							text: "Build-to-print Herstellung von Baugruppen/Bauteilen basierend auf Kundenanforderungen, die aus 2D-3D Modellen abgeleitet werden ",
@@ -120,12 +120,12 @@ function eqmPage() {
 							id: "qualitaetssicherung",
 						},
 					]}
-					imageSrc='/SACS_Flugzeug_weiss.png'
-					imageAlt='Kompetenzen Image'
-					checkIconSrc='/check.png'
+					imageSrc="/SACS_Flugzeug_weiss.png"
+					imageAlt="Kompetenzen Image"
+					checkIconSrc="/check.png"
 				/>
 				<Content
-					title='Vorteile, die wir bieten:'
+					title="Vorteile, die wir bieten:"
 					items={[
 						{
 							text: "Prüfung der Kunden-Bauunterlagen auf fertigungsgerechte Auslegung",
@@ -168,23 +168,23 @@ function eqmPage() {
 							id: "salzspruehne",
 						},
 					]}
-					imageSrc='/SACS_Flugzeug_weiss.png'
-					imageAlt='Kompetenzen Image'
-					checkIconSrc='/check.png'
+					imageSrc="/SACS_Flugzeug_weiss.png"
+					imageAlt="Kompetenzen Image"
+					checkIconSrc="/check.png"
 				/>
 			</section>
 			<div>
 				<Image
-					src='/mesure.jpg'
-					alt='Hero Image'
+					src="/mesure.jpg"
+					alt="Hero Image"
 					width={1920}
 					height={1080}
-					className='w-full h-[480px] object-cover '
+					className="w-full h-[480px] object-cover "
 				/>
 			</div>
-			<section className='m-8 '>
-				<h2 className='text-4xl mb-8'>QUALITY</h2>
-				<h3 className=' mb-8'>
+			<section className="m-8 ">
+				<h2 className="text-4xl mb-8">QUALITY</h2>
+				<h3 className=" mb-8">
 					Qualität auf höchstem Niveau – SACS Aerospace steht für langlebige und
 					hochwertige System- und Produktbaugruppen made in Germany.
 				</h3>
@@ -200,27 +200,27 @@ function eqmPage() {
 					schnelle Qualitätsregelkreise in Produktion, technischer Planung und
 					zuverlässiges Qualitätsmanagement in allen Fertigungsbereichen.
 				</h3>
-				<section className='mt-8 flex md:flex-row flex-col gap-8 justify-center'>
+				<section className="mt-8 flex md:flex-row flex-col gap-8 justify-center">
 					<AnimatedStatsSection
 						duration={2.5}
 						endValue={2800}
-						label='Anzahl Prüfmittel'
+						label="Anzahl Prüfmittel"
 					/>
 					<AnimatedStatsSection
 						duration={2.5}
 						endValue={50}
-						label='Anzahl Qualifikationen pro Jahr'
+						label="Anzahl Qualifikationen pro Jahr"
 					/>
 					<AnimatedStatsSection
 						duration={2.5}
 						endValue={1000000}
-						label='Anzahl Testzyklen pro Jahr'
+						label="Anzahl Testzyklen pro Jahr"
 					/>
 				</section>
 			</section>
-			<section className='m-8 flex md:flex-row flex-col '>
+			<section className="m-8 flex md:flex-row flex-col ">
 				<Content
-					title='Vorteile, die wir bieten:'
+					title="Vorteile, die wir bieten:"
 					items={[
 						{
 							text: "Zug/Druck Prüfmaschine",
@@ -247,12 +247,12 @@ function eqmPage() {
 							id: "zerstoerungsfreie-pruefung",
 						},
 					]}
-					imageSrc='/SACS_Flugzeug_weiss.png'
-					imageAlt='Kompetenzen Image'
-					checkIconSrc='/check.png'
+					imageSrc="/SACS_Flugzeug_weiss.png"
+					imageAlt="Kompetenzen Image"
+					checkIconSrc="/check.png"
 				/>
 				<Content
-					title='Einsatz neuester Messmethoden und Anwendungen im gesamten Fertigungsbereich:'
+					title="Einsatz neuester Messmethoden und Anwendungen im gesamten Fertigungsbereich:"
 					items={[
 						{
 							text: "Neueste CAQ-Software",
@@ -279,9 +279,9 @@ function eqmPage() {
 							id: "professionelle-pruefmittelverwaltung",
 						},
 					]}
-					imageSrc='/SACS_Flugzeug_weiss.png'
-					imageAlt='Kompetenzen Image'
-					checkIconSrc='/check.png'
+					imageSrc="/SACS_Flugzeug_weiss.png"
+					imageAlt="Kompetenzen Image"
+					checkIconSrc="/check.png"
 				/>
 			</section>
 		</>

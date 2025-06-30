@@ -1,21 +1,9 @@
 {
 	"title": "FIRMA",
-	"weAre": "WE ARE SACS AEROSPACE",
-	"description": "Rozwijamy nowe perspektywy. Co sekundę na świecie startuje samolot. Renomowani producenci samolotów tacy jak AIRBUS, BOEING i BOMBARDIER codziennie startują z naszymi technologiami.",
-	"innovation": "Innowacyjność i precyzja jest naszym paliwem. ",
-	"tagline": "We are SACS – The art of aerospace",
-	"competencies": {
-		"title": "Competencies:",
-		"design": "Design and Development",
-		"production": "Production and Assembly",
-		"supply": "Supply Chain Management",
-		"tooling": "Tool Development and Production",
-		"logistics": "Storage and Logistics",
-		"assembly": "Assembly of Assemblies"
-	},
-	"certifications": {
-		"en9100": "EN 9100",
-		"easa21": "EASA PART 21 SUBPART G",
-		"easa145": "EASA PART 145"
-	}
+	"weAre": "JESTEŚMY SACS AEROSPACE",
+	"description": "Rozwijamy nowe perspektywy. Co sekundę na całym świecie startuje samolot. Renomowani producenci samolotów, tacy jak AIRBUS, BOEING i BOMBARDIER, codziennie startują z naszymi technologiami.",
+	"innovation": "Innowacja i precyzja to nasze paliwo. Kreatywność i pasja to nasz napęd.",
+	"different": "Jako jedna z wiodących firm produkcyjnych i rozwojowych w branży lotniczej, wyróżniamy się silnymi kompetencjami podstawowymi – Engineering, Quality i Manufacturing (EQM) – i w ten sposób zapewniamy naszym klientom znaczące przewagi konkurencyjne na wymagającym rynku.",
+	"solutions": "SACS Aerospace GmbH została założona w 2002 roku jako firma produkcyjna i rozwojowa i codziennie zajmuje się innowacyjnymi rozwiązaniami dla lotnictwa. Perspektywiczna inżynieria, najnowocześniejsze technologie produkcyjne i efektywne zarządzanie łańcuchem dostaw umożliwiają precyzję na najwyższym poziomie.",
+	"tagline": "We are SACS – The art of aerospace"
 }

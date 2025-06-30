@@ -111,14 +111,12 @@ export const portfolioItems: PortfolioItem[] = [
 	},
 ];
 
-// Funkcja pomocnicza do znajdowania elementu po slug
 export const getPortfolioItemBySlug = (
-	slug: string
+	slug: string,
 ): PortfolioItem | undefined => {
 	return portfolioItems.find((item) => item.slug === slug);
 };
 
-// Funkcja do generowania slug z tytułu (ta sama co w carousel)
 export const generateSlug = (title: string): string => {
 	return title
 		.toLowerCase()

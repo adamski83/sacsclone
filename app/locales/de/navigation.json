@@ -9,19 +9,19 @@
 	"products": {
 		"structuralComponents": {
 			"title": "Strukturelle Komponenten",
-			"description": "Fortschrittliche Luftfahrtlösungen"
+			"description": "Fortschrittliche Luftfahrtlösungen für strukturelle Anwendungen"
 		},
 		"mechanicalSolutions": {
 			"title": "Mechanische Lösungen",
-			"description": "Präzisionsfertigung"
+			"description": "Präzisionsfertigung und Maschinenbau"
 		},
 		"standardHardware": {
 			"title": "Standard Hardware",
-			"description": "Qualitäts-Hardware-Lösungen"
+			"description": "Hochwertige Standard-Hardware-Komponenten"
 		},
 		"fastenerTechnologies": {
 			"title": "Befestigungstechnologien",
-			"description": "Fortschrittliche Befestigungslösungen"
+			"description": "Fortschrittliche Befestigungslösungen für die Luftfahrtindustrie"
 		}
 	}
 }
