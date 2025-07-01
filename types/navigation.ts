@@ -1,7 +1,5 @@
 "use client";
 
-import { useI18n } from "../hooks/useI18n";
-
 export type MenuItem = {
 	id: string;
 	labelKey: string;
@@ -11,6 +9,32 @@ export type MenuItem = {
 	descriptionKey?: string;
 	isExternal?: boolean;
 };
+
+export interface NavigationItem {
+	id: string;
+	label: string;
+	href: string;
+	description?: string;
+	icon?: string;
+	children?: NavigationItem[];
+	isExternal?: boolean;
+	target?: "_blank" | "_self" | "_parent" | "_top";
+	order?: number;
+	isVisible?: boolean;
+	permissions?: string[];
+}
+
+export interface NavigationConfig {
+	items: NavigationItem[];
+	maxDepth?: number;
+	allowExternalLinks?: boolean;
+}
+
+export interface BreadcrumbItem {
+	label: string;
+	href: string;
+	isActive?: boolean;
+}
 
 export const navigationStructure: MenuItem[] = [
 	{
@@ -86,72 +110,4 @@ export type TranslatedMenuItem = {
 	children?: TranslatedMenuItem[];
 	description?: string;
 	isExternal?: boolean;
-};
-
-export const useNavigationData = (): TranslatedMenuItem[] => {
-	const { tNav, isLoading } = useI18n();
-
-	if (isLoading) {
-		return [];
-	}
-
-	const translateMenuItem = (item: MenuItem): TranslatedMenuItem => ({
-		...item,
-		label: tNav(item.labelKey),
-		description: item.descriptionKey ? tNav(item.descriptionKey) : undefined,
-		children: item.children?.map(translateMenuItem),
-	});
-
-	return navigationStructure.map(translateMenuItem);
-};
-
-export const useNavigationDataSafe = () => {
-	const { tNav, isLoading } = useI18n();
-
-	const getTranslatedNavigation = (): TranslatedMenuItem[] => {
-		if (isLoading) {
-			return navigationStructure.map((item) => ({
-				...item,
-				label: item.labelKey,
-				description: item.descriptionKey,
-				children: item.children?.map((child) => ({
-					...child,
-					label: child.labelKey,
-					description: child.descriptionKey,
-				})),
-			}));
-		}
-
-		const translateMenuItem = (item: MenuItem): TranslatedMenuItem => {
-			try {
-				return {
-					...item,
-					label: tNav(item.labelKey) || item.labelKey,
-					description: item.descriptionKey
-						? tNav(item.descriptionKey) || item.descriptionKey
-						: undefined,
-					children: item.children?.map(translateMenuItem),
-				};
-			} catch (error) {
-				console.warn(`Translation failed for key: ${item.labelKey}`, error);
-				return {
-					...item,
-					label: item.labelKey,
-					description: item.descriptionKey,
-					children: item.children?.map((child) => ({
-						...child,
-						label: child.labelKey,
-						description: child.descriptionKey,
-					})),
-				};
-			}
-		};
-
-		return navigationStructure.map(translateMenuItem);
-	};
-
-	return {
-		navigationData: getTranslatedNavigation(),
-		isLoading,
-	};
 };

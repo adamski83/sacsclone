@@ -4,8 +4,8 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 
-import { useNavigationData } from "../../types/navigation";
 import { LanguageSwitcher } from "../LanguageSwitcher/LanguageSwitcher";
+import { useNavigationData } from "@/hooks/useNavigationData";
 
 export const Navigation = () => {
 	const navigationData = useNavigationData();

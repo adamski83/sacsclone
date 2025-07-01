@@ -88,17 +88,17 @@ function eqmPage() {
 				<section className="mt-8 flex md:flex-row flex-col gap-8 justify-center">
 					<AnimatedStatsSection
 						duration={2.5}
-						endValue={100}
+						endValue={180}
 						label="Projekte erfolgreich umgesetzt"
 					/>
 					<AnimatedStatsSection
 						duration={2.5}
-						endValue={100}
-						label="Projekte erfolgreich umgesetzt"
+						endValue={2100}
+						label="Zufridene Kunden"
 					/>
 					<AnimatedStatsSection
 						duration={2.5}
-						endValue={100}
+						endValue={10230}
 						label="Projekte erfolgreich umgesetzt"
 					/>
 				</section>
