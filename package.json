@@ -13,6 +13,8 @@
 		"type-check": "tsc --noEmit"
 	},
 	"dependencies": {
+		"@hookform/resolvers": "^5.1.1",
+		"@meltdownjs/cn": "^1.2.1",
 		"daisyui": "^5.0.43",
 		"gsap": "^3.13.0",
 		"i18next": "^25.2.1",
@@ -25,9 +27,11 @@
 		"react": "^19.0.0",
 		"react-chrono": "^2.9.1",
 		"react-dom": "^19.0.0",
+		"react-hook-form": "^7.59.0",
 		"react-i18next": "^15.5.3",
 		"react-icons": "^5.5.0",
-		"react-slick": "^0.30.3"
+		"react-slick": "^0.30.3",
+		"zod": "^3.25.67"
 	},
 	"devDependencies": {
 		"@eslint/eslintrc": "^3",
