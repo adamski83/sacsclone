@@ -11,7 +11,7 @@ export interface Language {
 }
 
 export const languages: Language[] = [
-	{ code: LanguageCode.DE, name: "Deutsch", flag: "/germany.png" },
-	{ code: LanguageCode.EN, name: "English", flag: "/usa.png" },
-	{ code: LanguageCode.PL, name: "Polski", flag: "/poland.png" },
+	{ code: LanguageCode.DE, name: "Deutsch", flag: "/png/germany.png" },
+	{ code: LanguageCode.EN, name: "English", flag: "/png/usa.png" },
+	{ code: LanguageCode.PL, name: "Polski", flag: "/png/poland.png" },
 ];
