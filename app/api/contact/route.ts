@@ -1,3 +1,7 @@
+import {
+	renderAutoReplyEmail,
+	renderContactEmail,
+} from "@/lib/email/emailRenderer";
 import { contactFormSchema } from "@/lib/validations/contact";
 import { NextResponse } from "next/server";
 import nodemailer from "nodemailer";
@@ -44,19 +48,13 @@ ${validatedData.message}
 ---
 Wysłano: ${new Date().toLocaleString("pl-PL", { timeZone: "Europe/Warsaw" })}
 			`.trim(),
-			html: `
-				<h2>Nowa wiadomość z formularza kontaktowego</h2>
-				<p><strong>Imię:</strong> ${validatedData.name}</p>
-				<p><strong>Email:</strong> <a href="mailto:${validatedData.email}">${validatedData.email}</a></p>
-				${validatedData.phone ? `<p><strong>Telefon:</strong> <a href="tel:${validatedData.phone}">${validatedData.phone}</a></p>` : ""}
-				<p><strong>Temat:</strong> ${validatedData.subject}</p>
-				<div style="background-color: #f5f5f5; padding: 15px; border-left: 4px solid #ea580c; margin: 20px 0;">
-					<strong>Wiadomość:</strong><br>
-					<div style="white-space: pre-wrap;">${validatedData.message}</div>
-				</div>
-				<hr>
-				<p><small>Wysłano: ${new Date().toLocaleString("pl-PL", { timeZone: "Europe/Warsaw" })}</small></p>
-			`,
+			html: renderContactEmail({
+				name: validatedData.name,
+				email: validatedData.email,
+				phone: validatedData.phone,
+				subject: validatedData.subject,
+				message: validatedData.message,
+			}),
 		};
 
 		const result = await transporter.sendMail(companyMailOptions);
@@ -67,15 +65,11 @@ Wysłano: ${new Date().toLocaleString("pl-PL", { timeZone: "Europe/Warsaw" })}
 				from: `"${process.env.APP_NAME}" <${process.env.SMTP_FROM}>`,
 				to: validatedData.email,
 				subject: `Potwierdzenie otrzymania wiadomości: ${validatedData.subject}`,
-				html: `
-					<h2>Dziękujemy za kontakt!</h2>
-					<p>Szanowny/a ${validatedData.name},</p>
-					<p>Otrzymaliśmy Twoją wiadomość dotyczącą: <strong>${validatedData.subject}</strong></p>
-					<p>Odpowiemy na nią w ciągu 24 godzin.</p>
-					<br>
-					<p>Pozdrawiamy,<br>
-					Zespół ${process.env.APP_NAME}</p>
-				`,
+				html: renderAutoReplyEmail(
+					validatedData.name,
+					validatedData.subject,
+					process.env.APP_NAME || "SACS Aerospace",
+				),
 			};
 
 			await transporter.sendMail(autoReplyOptions);
