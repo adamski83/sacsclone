@@ -55,7 +55,7 @@ export default async function PortfolioPage({ params }: PortfolioPageProps) {
 }
 
 export function generateStaticParams() {
-	return portfolioItems.map((item) => ({
+	return portfolioItems.map(item => ({
 		slug: item.slug,
 	}));
 }

@@ -87,7 +87,7 @@ export const Content = ({
 				repeat: 1,
 				ease: "power2.inOut",
 			},
-			"-=0.3",
+			"-=0.3"
 		);
 
 		tl.to(
@@ -98,7 +98,7 @@ export const Content = ({
 				duration: 0.6,
 				ease: "power2.out",
 			},
-			"-=0.8",
+			"-=0.8"
 		);
 
 		tl.to(
@@ -110,11 +110,11 @@ export const Content = ({
 				stagger: 0.1,
 				ease: "power2.out",
 			},
-			"-=0.4",
+			"-=0.4"
 		);
 
 		return () => {
-			ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+			ScrollTrigger.getAll().forEach(trigger => trigger.kill());
 		};
 	}, [animationDirection]);
 
@@ -143,7 +143,7 @@ export const Content = ({
 					{items.map((item, index) => (
 						<li
 							key={item.id}
-							ref={(el) => {
+							ref={el => {
 								if (el) itemsRef.current[index] = el;
 							}}
 							className="flex items-start mb-4 group hover:bg-gray-50 p-2 rounded-lg transition-all duration-300"

@@ -17,7 +17,7 @@ export const MobileMenu = ({
 	onClose,
 }: MobileMenuProps) => {
 	const [mobileSubmenuOpen, setMobileSubmenuOpen] = useState<string | null>(
-		null,
+		null
 	);
 	const { getActiveClass } = useActiveLink();
 
@@ -30,7 +30,7 @@ export const MobileMenu = ({
 	return (
 		<div className="md:hidden">
 			<div className="px-2 pt-2 pb-3 space-y-1 bg-inherit">
-				{navigationData.map((item) => (
+				{navigationData.map(item => (
 					<div key={item.id}>
 						{item.children ? (
 							<div>
@@ -39,7 +39,7 @@ export const MobileMenu = ({
 									className={getActiveClass(
 										item.href,
 										"w-full flex items-center justify-between px-3 py-2 text-base font-medium transition-colors duration-200 text-orange-600 bg-inherit",
-										"w-full flex items-center justify-between px-3 py-2 text-base font-medium transition-colors duration-200 text-gray-300 hover:text-white hover:bg-gray-700",
+										"w-full flex items-center justify-between px-3 py-2 text-base font-medium transition-colors duration-200 text-gray-300 hover:text-white hover:bg-gray-700"
 									)}
 									aria-expanded={mobileSubmenuOpen === item.id}
 									aria-controls={`mobile-submenu-${item.id}`}
@@ -65,14 +65,14 @@ export const MobileMenu = ({
 										className="pl-4 bg-inherit"
 										id={`mobile-submenu-${item.id}`}
 									>
-										{item.children.map((child) => (
+										{item.children.map(child => (
 											<Link
 												key={child.id}
 												href={child.href}
 												className={getActiveClass(
 													child.href,
 													"block px-3 py-2 text-sm transition-colors duration-200 text-orange-600 bg-inherit",
-													"block px-3 py-2 text-sm transition-colors duration-200 text-gray-300 hover:text-white hover:bg-gray-700",
+													"block px-3 py-2 text-sm transition-colors duration-200 text-gray-300 hover:text-white hover:bg-gray-700"
 												)}
 												onClick={() => {
 													onClose();
@@ -96,7 +96,7 @@ export const MobileMenu = ({
 								className={getActiveClass(
 									item.href,
 									"block px-3 py-2 text-base font-medium transition-colors duration-200 text-orange-600 bg-gray-500",
-									"block px-3 py-2 text-base font-medium transition-colors duration-200 text-gray-300 hover:text-white hover:bg-gray-700",
+									"block px-3 py-2 text-base font-medium transition-colors duration-200 text-gray-300 hover:text-white hover:bg-gray-700"
 								)}
 								onClick={onClose}
 							>

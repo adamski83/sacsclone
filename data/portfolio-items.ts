@@ -112,9 +112,9 @@ export const portfolioItems: PortfolioItem[] = [
 ];
 
 export const getPortfolioItemBySlug = (
-	slug: string,
+	slug: string
 ): PortfolioItem | undefined => {
-	return portfolioItems.find((item) => item.slug === slug);
+	return portfolioItems.find(item => item.slug === slug);
 };
 
 export const generateSlug = (title: string): string => {

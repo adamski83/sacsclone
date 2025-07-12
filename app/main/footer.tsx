@@ -7,7 +7,7 @@ import { FaInstagram } from "react-icons/fa";
 import { useI18n } from "../../hooks/useI18n";
 
 export const Footer = () => {
-	const { tFooter, isLoading } = useI18n();
+	const { tFooter } = useI18n();
 	return (
 		<footer className="bg-orange-900 text-white py-8 px-4">
 			<div className="container mx-auto">
@@ -32,17 +32,28 @@ export const Footer = () => {
 									</h2>
 								</li>
 								<li>
-									<h2 className="hover:text-orange-400">
+									<a
+										href="tel:+4974859772100"
+										className="hover:text-orange-400"
+									>
 										P: +49 7485 97722-100
-									</h2>
+									</a>
 								</li>
 								<li>
-									<h2 className="hover:text-orange-400">
+									<a
+										href="tel:+4974859772109"
+										className="hover:text-orange-400"
+									>
 										F: +49 7485 97722-109
-									</h2>
+									</a>
 								</li>
 								<li>
-									<h2 className="hover:text-orange-400">E: info@sacs.aero</h2>
+									<a
+										href="mailto:info@sacs.aero"
+										className="hover:text-orange-400"
+									>
+										E: info@sacs.aero
+									</a>
 								</li>
 							</ul>
 						</div>

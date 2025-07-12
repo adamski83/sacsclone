@@ -18,6 +18,9 @@ export const contactFormSchema = z.object({
 		.string()
 		.min(10, "Wiadomość musi mieć co najmniej 10 znaków")
 		.max(2000, "Wiadomość nie może być dłuższa niż 2000 znaków"),
+	privacy: z
+		.boolean()
+		.refine(val => val === true, "Musisz zaakceptować politykę prywatności"),
 });
 
 export type ContactFormData = z.infer<typeof contactFormSchema>;

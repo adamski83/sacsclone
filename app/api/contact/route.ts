@@ -48,13 +48,7 @@ ${validatedData.message}
 ---
 Wysłano: ${new Date().toLocaleString("pl-PL", { timeZone: "Europe/Warsaw" })}
 			`.trim(),
-			html: renderContactEmail({
-				name: validatedData.name,
-				email: validatedData.email,
-				phone: validatedData.phone,
-				subject: validatedData.subject,
-				message: validatedData.message,
-			}),
+			html: renderContactEmail(validatedData),
 		};
 
 		const result = await transporter.sendMail(companyMailOptions);
@@ -68,7 +62,7 @@ Wysłano: ${new Date().toLocaleString("pl-PL", { timeZone: "Europe/Warsaw" })}
 				html: renderAutoReplyEmail(
 					validatedData.name,
 					validatedData.subject,
-					process.env.APP_NAME || "SACS Aerospace",
+					process.env.APP_NAME || "SACS Aerospace"
 				),
 			};
 
@@ -90,7 +84,7 @@ Wysłano: ${new Date().toLocaleString("pl-PL", { timeZone: "Europe/Warsaw" })}
 					message: "Dane formularza są nieprawidłowe",
 					errors: error.errors,
 				},
-				{ status: 400 },
+				{ status: 400 }
 			);
 		}
 
@@ -100,7 +94,7 @@ Wysłano: ${new Date().toLocaleString("pl-PL", { timeZone: "Europe/Warsaw" })}
 				success: false,
 				message: "Wystąpił błąd podczas wysyłania wiadomości",
 			},
-			{ status: 500 },
+			{ status: 500 }
 		);
 	}
 }

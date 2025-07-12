@@ -15,7 +15,7 @@ export const DesktopMenu = ({ navigationData }: DesktopMenuProps) => {
 
 	return (
 		<div className="hidden md:flex items-center space-x-8">
-			{navigationData.map((item) => (
+			{navigationData.map(item => (
 				<div key={item.id} className="relative group">
 					{item.children ? (
 						<div className="relative">
@@ -23,7 +23,7 @@ export const DesktopMenu = ({ navigationData }: DesktopMenuProps) => {
 								className={getActiveClass(
 									item.href,
 									"flex items-center px-3 py-2 text-sm font-medium transition-colors duration-200 text-orange-600 border-b-2 border-orange-600",
-									"flex items-center px-3 py-2 text-sm font-medium transition-colors duration-200 text-white hover:text-orange-600",
+									"flex items-center px-3 py-2 text-sm font-medium transition-colors duration-200 text-white hover:text-orange-600"
 								)}
 								onMouseEnter={() => setActiveDropdown(item.id)}
 								onMouseLeave={() => setActiveDropdown(null)}
@@ -56,14 +56,14 @@ export const DesktopMenu = ({ navigationData }: DesktopMenuProps) => {
 								aria-label={`${item.label} submenu`}
 							>
 								<div className="py-1">
-									{item.children.map((child) => (
+									{item.children.map(child => (
 										<Link
 											key={child.id}
 											href={child.href}
 											className={getActiveClass(
 												child.href,
 												"block px-4 py-3 text-sm transition-colors duration-200 bg-orange-50 text-orange-600",
-												"block px-4 py-3 text-sm transition-colors duration-200 text-gray-700 hover:bg-gray-50 hover:text-orange-600",
+												"block px-4 py-3 text-sm transition-colors duration-200 text-gray-700 hover:bg-gray-50 hover:text-orange-600"
 											)}
 											role="menuitem"
 										>
@@ -84,7 +84,7 @@ export const DesktopMenu = ({ navigationData }: DesktopMenuProps) => {
 							className={getActiveClass(
 								item.href,
 								"px-3 py-2 text-sm font-medium transition-colors duration-200 text-orange-600 border-b-2 border-orange-600",
-								"px-3 py-2 text-sm font-medium transition-colors duration-200 text-white hover:text-orange-600",
+								"px-3 py-2 text-sm font-medium transition-colors duration-200 text-white hover:text-orange-600"
 							)}
 						>
 							{item.label}

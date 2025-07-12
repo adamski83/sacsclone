@@ -12,7 +12,7 @@ export const LanguageSwitcher = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
 	const currentLang =
-		languages.find((lang) => lang.code === currentLanguage) || languages[0];
+		languages.find(lang => lang.code === currentLanguage) || languages[0];
 
 	if (isLoading) {
 		return <div className="animate-pulse bg-gray-200 h-8 w-20 rounded"></div>;

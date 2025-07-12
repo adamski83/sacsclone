@@ -52,7 +52,7 @@ export const renderContactEmail = (data: ContactEmailData): string => {
 export const renderAutoReplyEmail = (
 	name: string,
 	subject: string,
-	appName: string,
+	appName: string
 ): string => {
 	return `
 		<!DOCTYPE html>
