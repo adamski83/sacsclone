@@ -12,7 +12,7 @@ export const Navigation = () => {
 	const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
 	const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 	const [mobileSubmenuOpen, setMobileSubmenuOpen] = useState<string | null>(
-		null,
+		null
 	);
 	const pathname = usePathname();
 
@@ -47,7 +47,7 @@ export const Navigation = () => {
 						<div className="text-xl font-bold text-white">SACS</div>
 					</Link>
 					<div className="hidden md:flex items-center space-x-8">
-						{navigationData.map((item) => (
+						{navigationData.map(item => (
 							<div key={item.id} className="relative group">
 								{item.children ? (
 									<div className="relative">
@@ -83,7 +83,7 @@ export const Navigation = () => {
 											onMouseLeave={() => setActiveDropdown(null)}
 										>
 											<div className="py-1">
-												{item.children.map((child) => (
+												{item.children.map(child => (
 													<Link
 														key={child.id}
 														href={child.href}
@@ -155,7 +155,7 @@ export const Navigation = () => {
 				{isMobileMenuOpen && (
 					<div className="md:hidden">
 						<div className="px-2 pt-2 pb-3 space-y-1 bg-inherit">
-							{navigationData.map((item) => (
+							{navigationData.map(item => (
 								<div key={item.id}>
 									{item.children ? (
 										<div>
@@ -184,7 +184,7 @@ export const Navigation = () => {
 											</button>
 											{mobileSubmenuOpen === item.id && (
 												<div className="pl-4 bg-inherit">
-													{item.children.map((child) => (
+													{item.children.map(child => (
 														<Link
 															key={child.id}
 															href={child.href}

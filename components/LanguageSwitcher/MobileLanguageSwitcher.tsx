@@ -15,7 +15,7 @@ export const MobileLanguageSwitcher = ({
 }: MobileLanguageSwitcherProps) => {
 	return (
 		<div className="flex space-x-1">
-			{languages.map((language) => (
+			{languages.map(language => (
 				<button
 					key={language.code}
 					onClick={() => onLanguageChange(language.code)}

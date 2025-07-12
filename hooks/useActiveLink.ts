@@ -15,7 +15,7 @@ export const useActiveLink = () => {
 	const getActiveClass = (
 		href: string,
 		activeClasses: string,
-		inactiveClasses: string,
+		inactiveClasses: string
 	): string => {
 		return isActiveLink(href) ? activeClasses : inactiveClasses;
 	};

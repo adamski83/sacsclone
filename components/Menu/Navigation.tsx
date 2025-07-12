@@ -37,6 +37,9 @@ export const Navigation = () => {
 						<div className="text-xl font-bold text-white">SACS</div>
 					</Link>
 					<DesktopMenu navigationData={navigationData} />
+					<div className="hidden md:flex items-center space-x-4">
+						<LanguageSwitcher />
+					</div>
 					<div className="md:hidden flex items-center space-x-4">
 						<LanguageSwitcher />
 						<button

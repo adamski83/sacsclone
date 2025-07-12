@@ -23,7 +23,7 @@ export const LanguageList = ({
 			}`}
 		>
 			<div className="py-1">
-				{languages.map((language) => (
+				{languages.map(language => (
 					<LanguageItem
 						key={language.code}
 						language={language}

@@ -57,7 +57,7 @@ function AutoPlayMethods() {
 				</h2>
 				<article className="relative mb-8">
 					<Slider ref={sliderRef} {...settings}>
-						{slideItems.map((item) => {
+						{slideItems.map(item => {
 							const href = `/portfolio-items/${
 								item.slug || generateSlug(item.title)
 							}`;

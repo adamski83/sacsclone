@@ -48,7 +48,7 @@ const AnimatedCounter = ({
 				scale: 1,
 				duration: 0.6,
 				ease: "back.out(1.7)",
-			},
+			}
 		);
 
 		tl.to(
@@ -60,16 +60,16 @@ const AnimatedCounter = ({
 				onUpdate: () => {
 					if (element) {
 						element.textContent = Math.floor(
-							countAnimation.value,
+							countAnimation.value
 						).toLocaleString();
 					}
 				},
 			},
-			"-=0.3",
+			"-=0.3"
 		);
 
 		return () => {
-			ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+			ScrollTrigger.getAll().forEach(trigger => trigger.kill());
 		};
 	}, [endValue, duration]);
 
@@ -120,11 +120,11 @@ export const AnimatedStatsSection = ({
 					end: "bottom 30%",
 					toggleActions: "play none none reverse",
 				},
-			},
+			}
 		);
 
 		return () => {
-			ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+			ScrollTrigger.getAll().forEach(trigger => trigger.kill());
 		};
 	}, []);
 

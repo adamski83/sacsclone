@@ -2,8 +2,9 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "../globals.css";
 
-import I18nProvider from "../providers/I18nProvider";
+import { Toaster } from "sonner";
 import { Navigation } from "../components/Menu/Navigation";
+import I18nProvider from "../providers/I18nProvider";
 import Footer from "./main/footer";
 import Header from "./main/header";
 
@@ -37,6 +38,7 @@ export default function RootLayout({
 					<Navigation />
 					{children}
 					<Footer />
+					<Toaster position="top-right" richColors />
 				</I18nProvider>
 			</body>
 		</html>
